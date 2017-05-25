@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-
     <h3>welcome vuex-demo</h3>
     <input type="button" value="增加" @click="increment">
     <input type="button" value="减少" @click="decrement">
@@ -41,5 +39,6 @@
 
 
 <style>
+  @import "./assets/css/index.css";
 
 </style>
