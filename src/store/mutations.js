@@ -4,13 +4,22 @@
 
 import {
     INCREMENT,
-    DECREMENT
+    DECREMENT,
+    HEAD_SHOW_SUCCESS,
+    HEAD_SHOW_FAIL,
+    HIDE_LOADING,
+    SHOW_LOADING,
+    FOOTER_HIDE,
+    FOOTER_SHOW
 } from './types'
 
 import getters from './getters'
 
 const state = {
-    count: 20
+    count: 20,
+    headShow:true,
+    loading:false,
+    footerShow:true
 };
 
 const mutations = {
@@ -19,6 +28,27 @@ const mutations = {
     },
     [DECREMENT](state) {
         state.count--;
+    },
+    /*头部*/
+    [HEAD_SHOW_SUCCESS](state){
+        state.headShow=true;
+    },
+    [HEAD_SHOW_FAIL](state){
+        state.headShow=false;
+    },
+    /*loading*/
+    [HIDE_LOADING](state){
+        state.loading=false;
+    },
+    [SHOW_LOADING](state){
+        state.loading=true;
+    },
+    /*footer*/
+    [FOOTER_HIDE](state){
+        state.footerShow=false;
+    },
+    [FOOTER_SHOW](state){
+        state.footerShow=true;
     }
 };
 
